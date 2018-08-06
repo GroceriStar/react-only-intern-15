@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Calendar} from 'react-calendar'
 
 class Calendar extends Component {
+
   state = {
     date: new Date(),
   }
@@ -9,6 +10,7 @@ class Calendar extends Component {
   onChange = date => this.setState({ date })
  
   render() {
+
     return (
       <div>
         <Calendar
@@ -18,6 +20,7 @@ class Calendar extends Component {
       </div>
     );
   }
+  
 }
 
 export default Calendar;

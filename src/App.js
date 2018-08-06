@@ -7,18 +7,21 @@ import CurrentWeekNumber from './CurrentWeekNumber';
 import DayandMonthArray from './DayandMonthsArray';
 
 class App extends Component {
+
   render() {
     return [
       <Header />,
-      <Calendar />, 
+      <Calendar />,
       <br />,
       <DayChecker />,
-      <CurrentWeekNumber />, 
+      <CurrentWeekNumber />,
       <MonthChecker />,
+      <br />,
       <br />,
       <br />,
       <DayandMonthArray />
     ];
   }
+
 }
 export default App;

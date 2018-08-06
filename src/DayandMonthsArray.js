@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class DayandMonthArray extends Component {
 
-
   render() {
 
     let DayandMonth = [
@@ -20,17 +19,23 @@ class DayandMonthArray extends Component {
       // here I accessed each sub-array in the DayandMonth array
       for (let i = 0; i < element.length; i++) {
 
-        if (i === today && today < 5) {
-          todayValue = DayandMonth[0][i] + " - You should go to work.";
-        } else if (i === today && today >= 5) {
+        if (i === today && (today === 0 || 6)) {
           todayValue = DayandMonth[0][i] + " - You can watch TV all day today.";
+          console.log(todayValue);
         }
+        if (i === today && (today === 1 || 2 || 3 || 4 || 5)) {
+          todayValue = DayandMonth[0][i] + " - You should go to work today.";
+        }
+
       }
+
       DayandMonth.forEach(function (element2d, index2d, array2d) {
 
         for (let m = 0; m < element2d.length; m++) {
+
           if (month === m) {
             monthValue = element2d[m];
+
           }
         }
       })
